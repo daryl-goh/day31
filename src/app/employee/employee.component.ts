@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class EmployeeComponent {
 
-
   title = "Employee page"
 
   number1 = 12;
@@ -16,6 +15,7 @@ export class EmployeeComponent {
   visible = this.ShowContent(this.number1,this.number2);
 
   IsVisible = true;
+Name: any;
 
   ShowContent(val1: number, val2: number) : boolean {
     if (val1 < val2) {
@@ -36,6 +36,27 @@ export class EmployeeComponent {
     this.color= event.target.value;
     }
 
+  Employee : any[] = [];
+
+  constructor() {
+    this.Employee = [
+      {
+        Name: 'Ah Kow',
+        Age: '21',
+        Gender: 'M'
+
+      }, {
+        Name: 'Ah Meow',
+        Age: '22',
+        Gender: 'F'
+      }, {
+        Name: 'Ah Tur',
+        Age: '52',
+        Gender: 'M'
+      }
+    ]
+
+  }
 
 
 }

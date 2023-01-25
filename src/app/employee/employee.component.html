@@ -49,10 +49,23 @@
         <p style="color:blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
     </div>
     <div *ngSwitchCase="'V'">
-        <p style="color:violet  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
+        <p style="color:violet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
     </div>
     <div *ngSwitchDefault>
         <p style="color:black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
     </div>
-
 </div>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of Employee">
+            <td>{{ employee.Name }}</td>
+            <td>{{ employee.Age }}</td>
+            <td>{{ employee.Gender }}</td>
+    </tbody>
+</table>
