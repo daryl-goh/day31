@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee } from '../models/employee';
 
 @Component({
   selector: 'app-employee',
@@ -36,23 +37,23 @@ export class EmployeeComponent {
     this.color = event.target.value;
   }
 
-  Employee: any[] = [];
+  Employee: Employee[] = [];
 
   constructor() {
     this.Employee = [
       {
         Name: 'Ah Kow',
-        Age: '21',
+        Age: 21,
         Gender: 'M',
       },
       {
         Name: 'Ah Meow',
-        Age: '22',
+        Age: 22,
         Gender: 'F',
       },
       {
         Name: 'Ah Tur',
-        Age: '52',
+        Age: 52,
         Gender: 'M',
       },
     ];
@@ -62,17 +63,17 @@ export class EmployeeComponent {
     this.Employee = [
       {
         Name: 'Amelia',
-        Age: '11',
+        Age: 11,
         Gender: 'M',
       },
       {
         Name: 'Benedict',
-        Age: '27',
+        Age: 27,
         Gender: 'F',
       },
       {
         Name: 'Catboy',
-        Age: '2',
+        Age: 2,
         Gender: 'M',
       },
     ];
