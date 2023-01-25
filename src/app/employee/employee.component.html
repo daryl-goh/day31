@@ -70,8 +70,9 @@
         last as isLast; trackBy: TrackByEmployeeName; even as isEven; odd as isOdd"
    
             
-            [ngClass] = "isEven?'color1':'color2'"
-            
+      
+            [ngClass]="GetCSS(isEven)"
+
 
             >
             <td>{{ i + 1 }}</td>
@@ -93,3 +94,13 @@
 <br><br>
 
 <p [ngClass]="'color1'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut excepturi dolorum, rem quis temporibus ea consectetur. Dignissimos, ex quam cupiditate blanditiis nemo suscipit similique, dolorum voluptatem nisi aut, numquam fuga.</p>
+
+<br><br>
+
+<div> Sum of 2 numbers: {{ number1 }} + {{ number2 }} = {{ number1 + number2 }} </div>
+
+<h1 [innerHTML] ="title"></h1>
+
+<br><br>
+
+<button (click)="ShowSomeData()">Show some data</button>

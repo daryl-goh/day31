@@ -92,4 +92,16 @@ export class EmployeeComponent {
   TrackByEmployeeName(index: number, employee: any): String {
     return employee.Name;
   }
+
+  GetCSS(isEven: any) {
+    if (isEven) {
+      return "color1";
+    } else {
+      return "color2"
+    }
+  }
+
+  ShowSomeData() {
+    alert("Hello World!!!")
+  }
 }
