@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class EmployeeComponent {
   title = 'Employee page';
 
-  number1 = 12;
+  number1 = 21;
   number2 = 20;
   // visible = (this.number1 > this.number2) ? true : false;
   visible = this.ShowContent(this.number1, this.number2);
@@ -74,6 +74,19 @@ export class EmployeeComponent {
         Gender: 'M',
       },
     ];
+  }
+
+  CheckAge(Age: number) {
+    let val = Age < 18 ? 'Under 18': 'Above 18';
+
+    switch(val) {
+      case 'Under 18':
+        return 'red';
+      case 'Above 18':
+        return 'green';
+    }
+
+    return "";
   }
 
   TrackByEmployeeName(index: number, employee: any): String {

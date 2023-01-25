@@ -56,7 +56,7 @@
     </div>
 </div>
 
-<table [ngStyle]="{'color': 'red'}" border="1">
+<table [ngStyle]="{'color': (number1>number2)?'red' : 'green'}" border="1">
     <thead>
         <th>S/No</th>
         <th>Name</th>
@@ -66,16 +66,30 @@
         <th>Second Record</th>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of Employee; let i = index; first as isFirst; last as isLast; trackBy: TrackByEmployeeName">
+        <tr *ngFor="let employee of Employee; let i = index; first as isFirst; 
+        last as isLast; trackBy: TrackByEmployeeName; even as isEven; odd as isOdd"
+   
+            
+            [ngClass] = "isEven?'color1':'color2'"
+            
+
+            >
             <td>{{ i + 1 }}</td>
-            <td>{{ employee.Name }}</td>
-            <td>{{ employee.Age }}</td>
+            <td>{{ employee.Name | uppercase}}</td>
+            <td [ngStyle] = "{ 'color' : CheckAge(employee.Age)}">{{ employee.Age }}</td>
             <td>{{ employee.Gender }}</td>
             <td>{{ isFirst }}</td>
             <td>{{ isLast }}</td>
+            <td>{{ isFirst }}</td>
+            <td>{{ isLast }}</td>
+        </tr>
     </tbody>
 </table>
 
 <br><br>
 
 <button (click)="GetMoreEmployee()">Add More Employees</button>
+
+<br><br>
+
+<p [ngClass]="'color1'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut excepturi dolorum, rem quis temporibus ea consectetur. Dignissimos, ex quam cupiditate blanditiis nemo suscipit similique, dolorum voluptatem nisi aut, numquam fuga.</p>
