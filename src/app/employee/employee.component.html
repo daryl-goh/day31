@@ -1,0 +1,58 @@
+<p>employee works!</p>
+
+<h1 *ngIf = "(number1 > number2)">{{ title }}</h1>
+
+<h1 >{{ visible }}</h1>
+
+<input type="radio" name="topgun" (click)="OnChange(true)">True
+<input type="radio" name="topgun" (click)="OnChange(false)">False
+
+<div *ngIf="IsVisible; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <p> Lorem ipsum dolor sit amet, consectetur adipis </p>
+</ng-template>
+
+<ng-template #elseBlock>
+    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa corporis velit exercitationem dolor dignissimos similique culpa fuga quia facilis perferendis voluptatem error cumque, magnam voluptates, quas ex laborum necessitatibus. Ullam.</p>
+</ng-template>
+
+
+<!-- 
+<p *ngIf="IsVisible">This is true</p>
+<p *ngIf="!IsVisible">This is false </p> -->
+
+<select (change)="SetColor($event)">
+    <option value="">---Select Color---</option>
+    <option value="R">Red</option>
+    <option value="O">Orange</option>
+    <option value="Y">Yellow</option>
+    <option value="G">Green</option>
+    <option value="B">Blue</option>
+    <option value="V">Violet</option>
+</select>
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'R'">
+        <p style="color:red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
+    </div>
+    <div *ngSwitchCase="'O'">
+        <p style="color:orange">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
+    </div>
+    <div *ngSwitchCase="'Y'">
+        <p style="color:yellow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
+    </div>
+    <div *ngSwitchCase="'G'">
+        <p style="color:green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
+    </div>
+    <div *ngSwitchCase="'B'">
+        <p style="color:blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
+    </div>
+    <div *ngSwitchCase="'V'">
+        <p style="color:violet  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
+    </div>
+    <div *ngSwitchDefault>
+        <p style="color:black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit blanditiis voluptatem, officiis aut cumque quae. Impedit autem optio, deserunt placeat ab repellat rem repudiandae. Tempora fugiat debitis doloremque repellat.</p>
+    </div>
+
+</div>
