@@ -104,3 +104,9 @@
 <br><br>
 
 <button (click)="ShowSomeData()">Show some data</button>
+
+<br><br>
+
+Enter My Name: <input type="text" [value]="myName" (input) = "myName = $any($event.target).value" >
+<br>
+Updated MyName is {{ myName }}

@@ -16,6 +16,8 @@ export class EmployeeComponent {
   IsVisible = true;
   Name: any;
 
+  myName: string = "COMWorks";
+
   ShowContent(val1: number, val2: number): boolean {
     if (val1 < val2) {
       return true;
