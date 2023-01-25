@@ -58,5 +58,22 @@ Name: any;
 
   }
 
+  GetMoreEmployee(): void {
+    this.Employee = [
+      {
+        Name: 'Amelia',
+        Age: '11',
+        Gender: 'M'
 
+      }, {
+        Name: 'Benedict',
+        Age: '27',
+        Gender: 'F'
+      }, {
+        Name: 'Catboy',
+        Age: '2',
+        Gender: 'M'
+      }
+    ]
+  }
 }

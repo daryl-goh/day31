@@ -56,16 +56,26 @@
     </div>
 </div>
 
-<table>
+<table border="1">
     <thead>
+        <th>S/No</th>
         <th>Name</th>
         <th>Age</th>
         <th>Gender</th>
+        <th>First Record</th>
+        <th>Second Record</th>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of Employee">
+        <tr *ngFor="let employee of Employee; let i = index; first as isFirst; last as isLast">
+            <td>{{ i + 1 }}</td>
             <td>{{ employee.Name }}</td>
             <td>{{ employee.Age }}</td>
             <td>{{ employee.Gender }}</td>
+            <td>{{ isFirst }}</td>
+            <td>{{ isLast }}</td>
     </tbody>
 </table>
+
+<br><br>
+
+<button (click)="GetMoreEmployee()">Add More Employees</button>
